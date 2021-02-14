@@ -1,0 +1,11 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<p><%= content %></p>
+<% for(let i=0;i<diffPosts.length;i++){ %>
+  <h1><%= diffPosts[i].title %></h1>
+  <p><%= diffPosts[i].content.substr(0,100) %>.....<a href="/posts/<%= diffPosts[i].title %>">Read More</a></p>
+
+<% } %>
+<%- include('partials/footer'); -%>
